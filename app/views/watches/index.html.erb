@@ -2,6 +2,9 @@
 
 <ul>
   <% @watches.each do |watch| %>
-  <li><%= watch.brand %> <%= watch.brand %></li>
+
+  <li><%= link_to "#{watch.brand} #{watch.model}", watch_path(:id) %> %></li>
+
+  <li><%= watch.brand %> <%= watch.brand %> </li>
   <% end %>
 </ul>
