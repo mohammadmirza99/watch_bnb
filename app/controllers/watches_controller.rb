@@ -15,12 +15,12 @@ class WatchesController < ApplicationController
 
   def create
     @watch = Watch.new(safe_params)
-
+    @watch.user = current_user
     if @watch.save
-      redirect_to user_path(@watch)
+      redirect_to user_path(current_user)
     else
-         render :new
-       end
+      render :new
+    end
   end
 
   def edit
