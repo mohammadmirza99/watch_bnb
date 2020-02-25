@@ -15,30 +15,6 @@ User.destroy_all
 
 puts "Creating seeds"
 
-# users_attributes = [{
-#     first_name:   "Mohammad",
-#     last_name: "Mirza",
-#     address: "123 rue something",
-#     email: "hammad_Senior@hotmail.com",
-#     password: "123456"
-#   },
-#   {
-#     first_name:   "Agustin",
-#     last_name: "Brun",
-#     address: "456 rue something",
-#     email: "augustin_brun@hotmail.com",
-#     password: "123456"
-
-#   },
-#   {
-#     first_name:   "Habib",
-#     last_name: "Mboup",
-#     address: "789 rue something",
-#     email: "habib_mboup@hotmail.com",
-#     password: "123456"
-#   }
-# ]
-
 puts "creating users"
 user1 = User.create({
         first_name:   "Mohammad",
@@ -69,6 +45,7 @@ watch1 = Watch.create({
     model: "model 1",
     material: "diamond",
     price: 40,
+    image_url: "https://images.rolex.com/2019/catalogue/images/upright-bba-with-shadow/m228238-0042.png?impolicy=upright-grid-card&imwidth=585",
     user: user1
   })
 
@@ -78,6 +55,7 @@ watch2 = Watch.create(
       model: "model 2",
       material: "gold",
       price: 50,
+      image_url: "https://www.kronos360.com/15925-large_default/audemars-piguet-royal-oak-chronographe-26315st-12684.jpg",
       user: user2
     }
   )
@@ -88,6 +66,7 @@ watch3 = Watch.create(
       model: "model 3",
       material: "platinum",
       price: 60,
+      image_url: "https://chronexttime.imgix.net/1/0/10195/10195_1_det.png?w=800&auto=format&fm=jpg&q=75&usm=30&usmrad=1&h=800&fit=clamp",
       user: user3
     }
   )
