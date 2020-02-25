@@ -1,4 +1,30 @@
-<h1>Show Users</h1>
+<h1>Show Page User</h1>
 
-<%= @user.first_name %>
+
+<div>
+  <%= @user.email %>
+</div>
+
+<div>
+  <%= link_to "Home Page", root_path %>
+</div>
+
+<div>
+  <%= link_to "Add New Watch", new_user_watch_path(:user_id) %>
+</div>
+
+
+<div>
+<%= link_to "Watches All", watches_path %>
+</div>
+
+<div>
+  <%= link_to "Specific watch", watch_path(:id) %>
+</div>
+
+
+<div>
+  <%= link_to "Edit specific watch", edit_watch_path(:id) %>
+</div>
+
 
