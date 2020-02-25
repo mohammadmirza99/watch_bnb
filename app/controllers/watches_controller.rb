@@ -33,6 +33,6 @@ class WatchesController < ApplicationController
   private
 
   def safe_params
-    params.require(:watch).permit(:brand, :model, :price, :material)
+    params.require(:watch).permit(:brand, :model, :price, :material, :image_url)
   end
 end

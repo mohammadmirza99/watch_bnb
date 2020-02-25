@@ -1,10 +1,10 @@
-<%= simple_form_for @review do |f| %>
+<%= simple_form_for @watch do |f| %>
 
   <%= f.input :model %>
   <%= f.input :brand %>
   <%= f.input :material %>
   <%= f.input :price %>
-
+  <%= f.input :image_url, as: :file %>
 
   <%= f.submit "Create", class: "btn btn-primary" %>
 <% end %>
