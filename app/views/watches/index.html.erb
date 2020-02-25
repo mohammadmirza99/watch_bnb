@@ -1,7 +1,15 @@
 <h1>Watch Index</h1>
 
 <ul>
-  <% @watches.each do |watch| %>
-  <li><%= watch.brand %> <%= watch.brand %></li>
+
+  <%= @watches.each do |watch| %>
+  <div class="card" style="width: 18rem;">
+    <%= cl_image_tag watch.image_url.key, height: 200, width: 200, crop: :fill %>
+
+    <div class="card-body">
+
+      <p class="card-text">watch.brand</p>
+    </div>
+  </div>
   <% end %>
 </ul>
