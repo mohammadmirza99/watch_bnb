@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 puts "cleaning database..."
 User.destroy_all
 Watch.destroy_all
@@ -108,3 +109,4 @@ Review.create!(review_attributes)
 Request.create!(requests_attributes)
 
 puts "finished"
+
