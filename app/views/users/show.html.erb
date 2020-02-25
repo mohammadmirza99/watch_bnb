@@ -1,18 +1,28 @@
 <h1>Show Page User</h1>
 
 
-<div>
-  <%= @user.email %>
-</div>
+
 
 <div>
   <%= link_to "Home Page", root_path %>
 </div>
 
+
 <div>
-  <%= link_to "Add New Watch", new_user_watch_path(:user_id) %>
+  <%= link_to "All requests", user_path %>
 </div>
 
+<div>
+  <%= link_to "Add New Watch", new_watch_path %>
+</div>
+
+<div>
+  <%= link_to "Edit Watch", edit_watch_path %>
+</div>
+
+<div>
+  <%= link_to "Delete a Watch", user_path, method: :delete %>
+</div>
 
 <div>
 <%= link_to "Watches All", watches_path %>
@@ -22,9 +32,5 @@
   <%= link_to "Specific watch", watch_path(:id) %>
 </div>
 
-
-<div>
-  <%= link_to "Edit specific watch", edit_watch_path(:id) %>
-</div>
 
 
