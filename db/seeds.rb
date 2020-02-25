@@ -13,27 +13,4 @@
 # })
 
 #Review.seed
-Review.create!({
-  content:
-  rating:
-})
 
-#Request.seed
-
-Request.create!({
-  date_start: "Le Dindon en Laisse",
-  date_end: "18 Rue Beautreillis, 75004 Paris, France"
-})
-
-#Watches.seed
-
-Watch.create!({
-  model: "Le Dindon en Laisse",
-  brand: "18 Rue Beautreillis, 75004 Paris, France"
-})
-
-
-Request.create!({
-  date_start: "Le Dindon en Laisse",
-  date_end: "18 Rue Beautreillis, 75004 Paris, France"
-})
