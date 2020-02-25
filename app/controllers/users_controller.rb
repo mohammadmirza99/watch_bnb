@@ -4,6 +4,10 @@ class UsersController < ApplicationController
   # @user = User.find(params[:id])
  end
 
+ def new
+
+end
+
  def create
   # @user = User.new(safe_params)
   # @user.save
