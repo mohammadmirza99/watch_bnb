@@ -1,14 +1,18 @@
 class RequestsController < ApplicationController
+
   def new
+    @watch = Watch.find(params[:watch_id])
     @request = Request.new
   end
 
   def create
-    @request = request.find(safe_params)
-    @request.watch = watch
+    @watch = Watch.find(params[:watch_id])
+    @request = Request.new(safe_params)
+    @request.watch = @watch
+    @request.user = current_user
 
     if @request.save
-      redirect_to user_path(@request)
+      redirect_to user_path(current_user)
     else
       render :new
     end
