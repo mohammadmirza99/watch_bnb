@@ -21,7 +21,7 @@
         <%= image_tag "https://images.unsplash.com/photo-1524738258074-f8125c6a7588?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "Profile ", user_path(current_user[:id]), class: "dropdown-item" %>
-          <%= link_to "Sign Out", destroy_user_session_path, class: "dropdown-item" %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete ,class: "dropdown-item" %>
         </div>
       </li>
       <% end %>
