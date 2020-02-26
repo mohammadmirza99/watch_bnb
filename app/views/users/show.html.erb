@@ -1,11 +1,18 @@
-<!-- <div class="dashboard-container"> -->
-    <%#= render 'shared/sidebar' %>
-    <h1>Show Page User</h1>
-<!-- </div> -->
+<div class="dashboard-container">
+    <div class="dashboard-sidebar">
+      <%= render 'shared/sidebar' %>
+    </div>
+  <div>
+    <div class="dashboard-main">
+      <h3>Requests</h3>
+      <%= render 'shared/request-card' %>
+      <%= render 'shared/request-card' %>
+      <%= render 'shared/request-card' %>
+    </div>
+  </div>
+</div>
 
-<div> <%= link_to "show all watches", watches_path %> </div>
-<div><%= link_to "show all requests", requests_path %> </div>
-<div><%= link_to "create new watch listing", new_watch_path %></div>
+
 
 
 
