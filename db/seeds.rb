@@ -45,7 +45,7 @@ watch1 = Watch.create({
     model: "model 1",
     material: "diamond",
     price: 40,
-    image_url: "https://images.rolex.com/2019/catalogue/images/upright-bba-with-shadow/m228238-0042.png?impolicy=upright-grid-card&imwidth=585",
+    image_url: cl_image_tag(“dvvauemgxnrsze7zarjv”),
     user: user1
   })
 
@@ -55,7 +55,7 @@ watch2 = Watch.create(
       model: "model 2",
       material: "gold",
       price: 50,
-      image_url: "https://www.kronos360.com/15925-large_default/audemars-piguet-royal-oak-chronographe-26315st-12684.jpg",
+      image_url: cl_image_tag(“d5vieik9zapgbi7tq1om”),
       user: user2
     }
   )
@@ -66,7 +66,7 @@ watch3 = Watch.create(
       model: "model 3",
       material: "platinum",
       price: 60,
-      image_url: "https://chronexttime.imgix.net/1/0/10195/10195_1_det.png?w=800&auto=format&fm=jpg&q=75&usm=30&usmrad=1&h=800&fit=clamp",
+      image_url: cl_image_tag("zpfp2smfjipdh83phw2p"),
       user: user3
     }
   )
