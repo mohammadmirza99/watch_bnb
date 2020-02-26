@@ -4,19 +4,12 @@
       <%= render 'shared/sidebar' %>
     </div>
   <div>
+
+    <%#= render 'shared/request_card' %>
     <div class="dashboard-main">
       <h3>Requests</h3>
       <div  class="dashboard-request">
-        <% @requests.each do |request| %>
-          <% if request.user == current_user  %>
-            <div class="card" style="width: 18rem;">
-            <%#= cl_image_tag watch.image_url.key, height: 200, width: 200, crop: :fill %>
-              <div class="card-body">
-                <p class="card-text"><%= request.date_start %></p>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+        <%= render 'shared/request-card' %>
       </div>
     </div>
   </div>
