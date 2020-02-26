@@ -1,0 +1,47 @@
+.container-watch {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.card_user_watch {
+  width: 700px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content-watch {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-img {
+  float: left;
+  width: 50%;
+  img {
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+}
+
+.inline-btn {
+  margin-top: 50px;
+
+
+}
+
+.info {
+  font-size: 15px;
+  margin-left: 15px;
+  h5 {
+    padding: 5px;
+  }
+}
