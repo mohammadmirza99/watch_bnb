@@ -1,7 +1,14 @@
 .dashboard-container{
-  display: grid;
-  height: 500px;
-  grid-template-columns: 200px auto;
-  grid-template-rows: 200px auto;
-
+  margin-left: 300px;
+  margin-right: 200px;
+  margin-top: 50px;
 }
+.dashboard-main{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  h3{
+    text-align: center;
+  }
+}
+

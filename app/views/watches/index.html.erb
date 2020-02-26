@@ -1,16 +1,22 @@
-<h1>Watch Index</h1>
-
-
-  <% @watches.each do |watch| %>
-    <% if watch.user == current_user  %>
-      <div class="card" style="width: 18rem;">
-      <%#= cl_image_tag watch.image_url.key, height: 200, width: 200, crop: :fill %>
-        <div class="card-body">
-          <p class="card-text"><%= watch.brand %></p>
-          <%= link_to "Edit", edit_watch_path(watch.id) %>
-          <%= link_to "Delete", watch_path(watch), method: :delete %>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-
+<div class="dashboard-container">
+    <div class="dashboard-sidebar">
+      <%= render 'shared/sidebar' %>
+    </div>
+  <div>
+    <div class="dashboard-main">
+      <h3>Your Watches</h3>
+      <% @watches.each do |watch| %>
+        <% if watch.user == current_user  %>
+          <div class="card" style="width: 18rem;">
+          <%#= cl_image_tag watch.image_url.key, height: 200, width: 200, crop: :fill %>
+            <div class="card-body">
+              <p class="card-text"><%= watch.brand %></p>
+              <%= link_to "Edit", edit_watch_path(watch.id) %>
+              <%= link_to "Delete", watch_path(watch), method: :delete %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
