@@ -1,0 +1,36 @@
+.container-watch {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.card_user_watch {
+  width: 700px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.content-watch {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-img {
+  float: left;
+  width: 50%;
+  img {
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+}
+
+.inline-btn {
+  margin-top: 50px;
+
+
+}
