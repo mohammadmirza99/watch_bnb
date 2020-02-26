@@ -1,3 +1,5 @@
 <h1>Create a new watch</h1>
 
-<%= render 'form' %>
+<% #if policy(Watch).new? %>
+  <%= render 'form' %>
+<% #end %>

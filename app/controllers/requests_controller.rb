@@ -1,5 +1,8 @@
 class RequestsController < ApplicationController
 
+  def index
+    @requests = Request.all
+  end
   def new
     @watch = Watch.find(params[:watch_id])
     @request = Request.new

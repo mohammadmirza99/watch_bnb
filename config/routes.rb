@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :requests, only: [:new, :create]
   end
   # resources :watches, only:[:index, :new, :create, :edit, :update, :delete]
-  resources :requests, only: [:edit, :update, :delete]
+  resources :requests, only: [:index, :edit, :update, :delete]
   # resources :users do
   #   resources :watches, only: [:new, :create, :edit, :update, :delete]
   #   resources :requests, only: [:new, :create, :edit, :update, :delete]

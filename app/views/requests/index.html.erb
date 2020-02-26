@@ -1,14 +1,10 @@
-<h1>Watch Index</h1>
-
-
-  <% @watches.each do |watch| %>
-    <% if watch.user == current_user  %>
+  <% @requests.each do |request| %>
+    <% if request.user == current_user  %>
       <div class="card" style="width: 18rem;">
       <%#= cl_image_tag watch.image_url.key, height: 200, width: 200, crop: :fill %>
         <div class="card-body">
-          <p class="card-text"><%= watch.brand %></p>
+          <p class="card-text"><%= request.date_start %></p>
         </div>
       </div>
     <% end %>
   <% end %>
-
