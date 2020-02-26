@@ -22,7 +22,7 @@ class WatchesController < ApplicationController
     # authorize @watch
     @watch.user = current_user
     if @watch.save
-      redirect_to user_path(current_user)
+      redirect_to watches_path
     else
       render :new
     end

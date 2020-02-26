@@ -12,7 +12,7 @@
 
 
         <div class="column-img">
-            <%= cl_image_tag watch.image_url.key, height: 50, width: 50, crop: :fill %>
+            <%= cl_image_tag watch.image_url.key, crop: :fill %>
         </div>
 
         <div class="content-watch">
@@ -20,9 +20,9 @@
             <h3><%= watch.brand %></h3>
           </div>
           <div class="info">
-            <h3><%= watch.model %></h3>
-            <h3><%= watch.material %></h3>
-            <h3><%= watch.price %></h3>
+            <h5><%= watch.model %></h5>
+            <h5><%= watch.material %></h5>
+            <h5><%= watch.price %></h5>
           </div>
 
           <div class="inline-btn">
