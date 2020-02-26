@@ -1,10 +1,23 @@
-  <% @requests.each do |request| %>
-    <% if request.user == current_user  %>
-      <div class="card" style="width: 18rem;">
-      <%#= cl_image_tag watch.image_url.key, height: 200, width: 200, crop: :fill %>
-        <div class="card-body">
-          <p class="card-text"><%= request.date_start %></p>
-        </div>
+
+<div class="dashboard-container">
+    <div class="dashboard-sidebar">
+      <%= render 'shared/sidebar' %>
+    </div>
+  <div>
+    <div class="dashboard-main">
+      <h3>Requests</h3>
+      <div  class="dashboard-request">
+        <% @requests.each do |request| %>
+          <% if request.user == current_user  %>
+            <div class="card" style="width: 18rem;">
+            <%#= cl_image_tag watch.image_url.key, height: 200, width: 200, crop: :fill %>
+              <div class="card-body">
+                <p class="card-text"><%= request.date_start %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
-    <% end %>
-  <% end %>
+    </div>
+  </div>
+</div>
