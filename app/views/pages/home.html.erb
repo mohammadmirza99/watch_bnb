@@ -2,7 +2,7 @@
 
 
 
-<div class="d-flex flex-row container">
+<div class="d-flex justify-content-between container">
     <% @watches.each do |watch| %>
 
     <div class="p-2">
@@ -10,9 +10,9 @@
       <img class="card-img-top" src="..." alt="Card image cap">
       <div class="card-body">
       <h5 class="card-title"><%= watch.brand %> <%= watch.model %></h5>
-      <p class="card-text"><%= watch.price %></p>
+      <p class="card-text"><%= watch.price %>$/day</p>
       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-      <%= link_to "Book Watch", new_watch_request_path(watch.id) %>
+      <%= link_to "Book Watch", new_watch_request_path(watch.id)%>
     </div>
   </div>
 </div>

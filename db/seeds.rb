@@ -40,36 +40,44 @@ user3 = User.create({
 
 puts "creating watches"
 
-watch1 = Watch.create({
+
+watch1 = Watch.new({
     brand: "rolex",
-    model: "model 1",
+    model: "model ",
     material: "diamond",
     price: 40,
-    # image_url: 'https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672411/d5vieik9zapgbi7tq1om.jpg',
     user: user1
   })
+file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672411/d5vieik9zapgbi7tq1om.jpg")
+watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch1.save
 
-watch2 = Watch.create(
+watch2 = Watch.new(
     {
       brand: "Audemars piguet",
       model: "model 2",
       material: "gold",
       price: 50,
-      # image_url: 'https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582671800/dvvauemgxnrsze7zarjv.png',
       user: user2
-    }
-  )
+    })
+file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582671800/dvvauemgxnrsze7zarjv.png")
+watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch2.save
 
-watch3 = Watch.create(
+
+watch3 = Watch.new(
     {
       brand: "Jacob & Co",
       model: "model 3",
       material: "platinum",
       price: 60,
-      # image_url: 'https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672395/zpfp2smfjipdh83phw2p.jpg',
       user: user3
     }
   )
+file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672395/zpfp2smfjipdh83phw2p.jpg")
+watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch3.save
+
 
 
 # requests_attributes = [{
