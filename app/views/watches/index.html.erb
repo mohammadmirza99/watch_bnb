@@ -1,4 +1,3 @@
-
 <div class="dashboard-container">
     <div class="dashboard-sidebar">
       <%= render 'shared/sidebar' %>
@@ -12,6 +11,8 @@
           <%#= cl_image_tag watch.image_url.key, height: 200, width: 200, crop: :fill %>
             <div class="card-body">
               <p class="card-text"><%= watch.brand %></p>
+              <%= link_to "Edit", edit_watch_path(watch.id) %>
+              <%= link_to "Delete", watch_path(watch), method: :delete %>
             </div>
           </div>
         <% end %>
@@ -19,7 +20,3 @@
     </div>
   </div>
 </div>
-
-
-
-

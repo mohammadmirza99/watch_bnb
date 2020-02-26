@@ -29,10 +29,19 @@ class WatchesController < ApplicationController
   end
 
   def edit
-
+    @watch = Watch.find(params[:id])
   end
 
   def update
+    @watch = Watch.find(params[:id])
+    @watch.update(safe_params)
+    redirect_to user_path(current_user)
+  end
+
+  def destroy
+    @watch = Watch.find(params[:id])
+    @watch.destroy
+    redirect_to watches_path
   end
 
   private
