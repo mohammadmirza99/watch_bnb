@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
  def show
   # @user = User.find(params[:id])
+  @watches = Watch.all
  end
 
  def new
