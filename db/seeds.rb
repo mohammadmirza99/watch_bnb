@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+require 'open-uri'
 
 puts "cleaning database..."
 Review.destroy_all
@@ -45,7 +45,7 @@ watch1 = Watch.create({
     model: "model 1",
     material: "diamond",
     price: 40,
-    # image_url: ("dvvauemgxnrsze7zarjv" as: :file),
+    # image_url: 'https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672411/d5vieik9zapgbi7tq1om.jpg',
     user: user1
   })
 
@@ -55,7 +55,7 @@ watch2 = Watch.create(
       model: "model 2",
       material: "gold",
       price: 50,
-      # image_url: ("d5vieik9zapgbi7tq1om" as: :file),
+      # image_url: 'https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582671800/dvvauemgxnrsze7zarjv.png',
       user: user2
     }
   )
@@ -66,57 +66,57 @@ watch3 = Watch.create(
       model: "model 3",
       material: "platinum",
       price: 60,
-      # image_url: ("zpfp2smfjipdh83phw2p" as: :file),
+      # image_url: 'https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672395/zpfp2smfjipdh83phw2p.jpg',
       user: user3
     }
   )
 
 
-requests_attributes = [{
-    date_start: "Nov 1",
-    date_end: "Nov 2",
-    user: user1,
-    watch: watch2
-  },
-  {
-    date_start: "Nov 3",
-    date_end: "Nov 4",
-    user: user2,
-    watch: watch3
-  },
-  {
-    date_start: "Nov 5",
-    date_end: "Nov 6",
-    user: user3,
-    watch: watch1
-  }
-]
-puts "creating requests"
-Request.create!(requests_attributes)
+# requests_attributes = [{
+#     date_start: "Nov 1",
+#     date_end: "Nov 2",
+#     user: user1,
+#     watch: watch2
+#   },
+#   {
+#     date_start: "Nov 3",
+#     date_end: "Nov 4",
+#     user: user2,
+#     watch: watch3
+#   },
+#   {
+#     date_start: "Nov 5",
+#     date_end: "Nov 6",
+#     user: user3,
+#     watch: watch1
+#   }
+# ]
+# puts "creating requests"
+# Request.create!(requests_attributes)
 
-review_attributes =[{
-        rating: 4,
-        content: "The watch was amazing",
-        user: user1,
-        watch: watch3
-    },
+# review_attributes =[{
+#         rating: 4,
+#         content: "The watch was amazing",
+#         user: user1,
+#         watch: watch3
+#     },
 
-    {
-      rating: 4,
-      content: "Very nice watch",
-      user: user2,
-      watch: watch1
-    },
+#     {
+#       rating: 4,
+#       content: "Very nice watch",
+#       user: user2,
+#       watch: watch1
+#     },
 
-    {
-      rating: 3,
-      content: "Watch was okay, not the best",
-      user: user3,
-      watch: watch2
-    }
-]
-puts "creating reviews"
-Review.create!(review_attributes)
+#     {
+#       rating: 3,
+#       content: "Watch was okay, not the best",
+#       user: user3,
+#       watch: watch2
+#     }
+# ]
+# puts "creating reviews"
+# Review.create!(review_attributes)
 
 puts "finished"
 
