@@ -1,0 +1,54 @@
+.card-dash {
+  display: flex;
+  height: 190px;
+  width: 600px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  margin: 10px auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 5px;
+  width: 350px;
+}
+
+.column1 {
+  float: left;
+  width: 40%;
+  img {
+    height: 188px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+}
+
+.column2 {
+  width: 375px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.text {
+  padding-right: 30px;
+}
+
+.button {
+  background-color: #80001f;
+  padding: 5px;
+  border-radius: 50px;
+  text-align: center;
+  width: 100px;
+  margin-left: 140px;
+  text-decoration: none;
+  a {
+    color: white;
+  }
+}
