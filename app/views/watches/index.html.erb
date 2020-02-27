@@ -13,7 +13,6 @@
           <%#= cl_image_path watch.image_url.key, crop: :fill %>
         <%# end %>
       </div>
-
       <div class="content-watch">
         <div class="row1">
           <div>
@@ -23,17 +22,13 @@
             <p> <%= watch.price %> $</p>
           </div>
         </div>
-
         <div class="row2">
 
-          <%#  <div> <h6> Material :</h6> <p><%= watch.material  </p> </div> %>
           <div>
             <%= link_to "Edit", new_watch_request_path(watch.id), class:"button-user" %>
           </div>
         </div>
-
       </div>
-
     </div>
 
     <% end %>
