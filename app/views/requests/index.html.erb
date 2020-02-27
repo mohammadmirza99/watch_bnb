@@ -1,17 +1,21 @@
+<div class="container-body">
+  <div class="dashboard-container">
+      <div class="dashboard-sidebar">
+        <%= render 'shared/sidebar' %>
+      </div>
+    <div>
 
-<div class="dashboard-container">
-    <div class="dashboard-sidebar">
-      <%= render 'shared/sidebar' %>
-    </div>
-  <div>
+      <%#= render 'shared/request_card' %>
+      <div class="dashboard-main">
+        <h3>Requests</h3>
+        <div  class="dashboard-request">
+          <%= render 'shared/request-card' %>
+        </div>
 
-    <div class="dashboard-main">
-      <h3>Requests</h3>
-
-      <div  class="dashboard-request">
-        <%= render 'shared/card_dash' %>
       </div>
 
     </div>
   </div>
+  <div class="push"></div>
 </div>
+

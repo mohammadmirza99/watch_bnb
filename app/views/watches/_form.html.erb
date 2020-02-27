@@ -1,12 +1,14 @@
-<%= simple_form_for @watch do |f| %>
+<div class="container-body">
+  <%= simple_form_for @watch do |f| %>
 
-  <%= f.input :model %>
-  <%= f.input :brand %>
-  <%#= f.input :material %>
-  <%= f.input :price %>
+    <%= f.input :model %>
+    <%= f.input :brand %>
+    <%#= f.input :material %>
+    <%= f.input :price %>
 
-  <%= f.input :image_url, as: :file %>
+    <%= f.input :image_url, as: :file %>
 
-  <%= f.submit "Create", class: "btn btn-primary" %>
-<% end %>
+    <%= f.submit "Create", class: "btn btn-primary" %>
+  <% end %>
+</div>
 
