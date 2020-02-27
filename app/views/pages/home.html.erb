@@ -21,11 +21,11 @@
     <div class="card-user">
 
       <div class="card-image">
-        <%# if watch.image_url.attached? %>
+        <% if watch.image_url.attached? %>
           <img src="https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582817022/GHxz53Rryvj58zTtGx7o9q3t.jpg" alt="">
-        <%# else %>
-          <%#= cl_image_path watch.image_url.key, crop: :fill %>
-        <%# end %>
+        <% else %>
+          <%= cl_image_path watch.image_url.key, crop: :fill %>
+        <% end %>
       </div>
 
       <div class="content-watch">
