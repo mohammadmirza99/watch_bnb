@@ -21,8 +21,6 @@ export const modalClick = (titleProp, textProp, iconProp) => {
 
 
 
-
-
 // Try to implement modal for delete.
 export const deleteItemModal = () =>swal({
   title: "Are you sure?",
