@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-<div class="container-body">
-  <div class="dashboard-container">
-      <div class="dashboard-sidebar">
-        <%= render 'shared/sidebar' %>
-        <div class="container-watch">
-    <% @watches.each do |watch| %>
-    <% if watch.user == current_user %>
+<!-- this html contain represent the cards in the home page by augustin -->
+<div class="container">
+  <h1>All our watches</h1>
+
+  <% @watches.each do |watch| %>
     <div class="card-user">
+
       <div class="card-image">
         <%# if watch.image_url.attached? %>
           <img src="https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582817022/GHxz53Rryvj58zTtGx7o9q3t.jpg" alt="">
@@ -20,6 +18,7 @@
           <div>
             <h6><%= watch.brand %> <br> <%= watch.model %></h6>
           </div>
+
           <div>
             <p> <%= watch.price %> $</p>
           </div>
@@ -28,26 +27,17 @@
         <div class="row2">
 
           <%#  <div> <h6> Material :</h6> <p><%= watch.material  </p> </div> %>
+
+
           <div>
-            <%= link_to "Edit", new_watch_request_path(watch.id), class:"button-user" %>
+            <%= link_to "Book", new_watch_request_path(watch.id), class:"button-user" %>
           </div>
+
         </div>
 
       </div>
 
     </div>
-
-    <% end %>
   <% end %>
-  </div>
-      </div>
-  </div>
-
-
 </div>
-
-
-
-
-
 
