@@ -1,1 +1,15 @@
+#modal-btn{
+  color: red;
 
+  button: {
+    color: purple;
+  }
+}
+
+#modal-btn :onclick{
+  background: blue;
+}
+
+.swal-button--confirm{
+  background:red;
+}
