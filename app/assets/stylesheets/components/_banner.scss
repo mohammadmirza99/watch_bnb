@@ -1,12 +1,6 @@
-.carousel-item {
-  height: 500px !important;
-}
-
-.carousel-item img {
-  width: 500px;
-  height: 500px;
-
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
+.jumbotron {
+  background-image: url('https://images.unsplash.com/photo-1521485950395-bcfb8fc9bd06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
 }

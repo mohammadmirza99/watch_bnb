@@ -1,14 +1,16 @@
-
-<div class="dashboard-container">
-    <div class="dashboard-sidebar">
-      <%= render 'shared/sidebar' %>
-    </div>
-  <div>
-    <div class="dashboard-main">
-      <h3>Add a watch</h3>
-      <% #if policy(Watch).new? %>
-      <%= render 'form' %>
-      <% #end %>
+<div class="container-body">
+  <div class="dashboard-container">
+      <div class="dashboard-sidebar">
+        <%= render 'shared/sidebar' %>
+      </div>
+    <div>
+      <div class="dashboard-main">
+        <h3>Add a watch</h3>
+        <% #if policy(Watch).new? %>
+        <%= render 'form' %>
+        <% #end %>
+      </div>
     </div>
   </div>
 </div>
+
