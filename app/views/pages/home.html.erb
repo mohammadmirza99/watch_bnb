@@ -1,27 +1,3 @@
 <%= render 'shared/banner' %>
 
-<div class="homepage-container">
-  <h1>Trending</h1>
-  <% @watches.each do |watch| %>
-  <div class="d-flex justify-content-between container" id = "homepage-card">
-      <div class="p-2">
-        <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://static.patek.com/images/articles/banner/1600/5131_1P_001_1@2x.jpg" alt="Card image cap">
-        <div class="card-body">
-        <h5 class="card-title"><%= watch.brand %> <%= watch.model %></h5>
-        <p class="card-text"><%= watch.price %>$/day</p>
-        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        <%= link_to "Book Watch", new_watch_request_path(watch.id)%>
-      </div>
-    </div>
-  </div>
-  <% end %>
-</div>
-
-
-
-
-
-<%# Testing button to see if modal works %>
-<button onclick="modalClick('test1', 'test2', 'https://images.rolex.com/2019/catalogue/images/upright-bba-with-shadow/m116613lb-0005.png?imwidth=1024')">Reserve</button>
-<%# -------------  %>
+<%= render 'shared/card-user' %>
