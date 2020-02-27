@@ -12,7 +12,9 @@
 
 
         <div class="column-img">
-            <%= cl_image_tag watch.image_url.key, crop: :fill %>
+
+            <%# commented until cloudinary is resolved  %>
+            <%#= cl_image_tag watch.image_url.key, crop: :fill %>
         </div>
 
         <div class="content-watch">
