@@ -1,7 +1,7 @@
 <% @requests.each do |request| %>
   <div class="card-dash">
     <div class="column1">
-      <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80" alt="watch", style="width: 200px">
+      <%= cl_image_tag request.watch.image_url.key, crop: :fill %>
     </div>
 
     <div class="content">
