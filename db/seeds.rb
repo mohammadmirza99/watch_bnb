@@ -44,7 +44,7 @@ puts "creating watches"
 watch1 = Watch.new({
     brand: "rolex",
     model: "model ",
-    material: "diamond",
+    description: "diamond",
     price: 40,
     user: user1
   })
@@ -56,12 +56,12 @@ watch2 = Watch.new(
     {
       brand: "Audemars piguet",
       model: "model 2",
-      material: "gold",
+      description: "gold",
       price: 50,
       user: user2
     })
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582671800/dvvauemgxnrsze7zarjv.png")
-watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch2.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch2.save
 
 
@@ -69,62 +69,65 @@ watch3 = Watch.new(
     {
       brand: "Jacob & Co",
       model: "model 3",
-      material: "platinum",
+      description: "platinum",
       price: 60,
       user: user3
     }
   )
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672395/zpfp2smfjipdh83phw2p.jpg")
-watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch3.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch3.save
 
 watch4 = Watch.new(
     {
       brand: 'Fossil',
       model: "Gen 3",
-      material: 'Silver',
+      description: 'Silver',
       price: 90,
       user: user3
     }
   )
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582752278/71T7jk_2BG5-L._AC_UX342__gtuh4i.jpg")
-watch1.image_url.attach(io: file, filename: 'nes.png', content_type: "image/png")
+watch4.image_url.attach(io: file, filename: 'nes.png', content_type: "image/png")
 watch4.save
+
 watch5 = Watch.new(
     {
       brand: 'Tissot',
       model: 'Gentleman',
-      material: 'Silver',
+      description: 'Silver',
       price: 120,
       user: user2
     }
   )
 file = URI.open('https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582752415/T127.410.11.041.00_1_zzw3f0.png')
-watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch5.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch5.save
+
 watch6 = Watch.new(
     {
       brand: 'Garmin',
       model: "Fenix 5",
-      material: 'Plastic',
+      description: 'Plastic',
       price: 200,
       user: user1
     }
   )
 file = URI.open('https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582752553/5060908-RSW00_pio3bp.jpg')
-watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch6.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch6.save
+
 watch7 = Watch.new(
     {
       brand: 'Diesel',
       model: "Serie",
-      material: 'Leather',
+      description: 'Leather',
       price: 250,
       user: user3
     }
   )
 file = URI.open('https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582753372/Montre-Homme-Diesel-DZ4282_fobq5m.jpg')
-watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch7.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch7.save
 
 
