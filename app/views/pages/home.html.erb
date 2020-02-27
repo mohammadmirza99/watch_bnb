@@ -1,23 +1,40 @@
-<%= render 'shared/banner' %>
 
-<<<<<<< HEAD
-<div class="homepage-container">
-  <h1>Trending</h1>
-  <div class="d-flex justify-content-between container">
-      <% @watches.each do |watch| %>
-      <div class="p-2">
-        <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://static.patek.com/images/articles/banner/1600/5131_1P_001_1@2x.jpg" alt="Card image cap">
-        <div class="card-body">
-        <h5 class="card-title"><%= watch.brand %> <%= watch.model %></h5>
-        <p class="card-text"><%= watch.price %>$/day</p>
-        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        <%= link_to "Book Watch", new_watch_request_path(watch.id)%>
-      </div>
+<main role="main">
+  <div class="jumbotron">
+  <h1 class="display-4">Welcome to WatchBnb</h1>
+  <p class="lead">Find the perfect watch for the occasion</p>
+  <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+          <div class="searchbar">
+            <input class="search_input" type="text" name="" placeholder="Search...">
+            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+          </div>
+        </div>
+  </div>
 </div>
-
-
-
-
-
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <h1>Trending</h1>
+      <div class="row">
+        <% @watches.each do |watch| %>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1659&q=80" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title><%= watch.brand %></title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              <div class="card-body">
+                <p class="card-text"><%= watch.brand %></p>
+                <p class="card-text"><%= watch.model %></p>
+                <p class="card-text"><%= watch.price %>$/day</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
 
