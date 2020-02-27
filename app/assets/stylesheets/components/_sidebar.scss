@@ -3,11 +3,12 @@
   width: 200px;
   position: fixed;
   z-index: 0;
-  top: 0;
+  top: 40px;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 70px;
+  padding-top: 30px;
+  margin-bottom: 70px;
 }
 
 .sidenav a {

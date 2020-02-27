@@ -1,6 +1,9 @@
-<h1>Show Page Watch</h1>
+<div class="container-body">
+  <h1>Show Page Watch</h1>
 
-<%# if policy(Watch).show? %>
-<%= link_to "Book watch", new_watch_request_path(@watch.id) %>
-<%# end %>
+  <%# if policy(Watch).show? %>
+  <%= link_to "Book watch", new_watch_request_path(@watch.id) %>
+  <%# end %>
+  <div class="push"></div>
+</div>
 
