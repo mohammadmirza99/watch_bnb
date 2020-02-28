@@ -8,7 +8,8 @@
     <div class="card-user">
       <div class="card-image">
         <% if watch.image_url.attached? %>
-          <%= cl_image_tag watch.image_url.key, crop: :fill, height: 350, width: 270 %>
+
+          <%= cl_image_path watch.image_url.key, crop: :fill, height: 350, width: 270 %>
         <% else %>
           <img src="https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582817022/GHxz53Rryvj58zTtGx7o9q3t.jpg" alt="">
         <% end %>
