@@ -22,6 +22,15 @@
     <div class="card-user">
 
       <div class="card-image">
+
+      <%# Added heart wishlist button  %>
+      <div id="watch-<%= watch.id %>">
+        <%= link_to watch_wishlists_path(watch), method: :post, remote: true do %>
+            <i class="far fa-heart"></i>
+        <% end %>
+      </div>
+      <%# -------------------------------  %>
+
         <% if watch.image_url.attached? %>
           <%= cl_image_tag watch.image_url.key, crop: :fill, height: 350, width: 270 %>
         <% else %>
@@ -63,6 +72,8 @@
   </main>
 
 </div>
+
+<%# Testing buttons  %>
 <%= link_to "test", watches_path, method: :post  %>
 <a rel="no follow" data-method ="post" href="/watches/create"><i class="far fa-heart"></i></a>
 

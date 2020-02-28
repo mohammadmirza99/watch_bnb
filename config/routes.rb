@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   resources :watches do
     resources :requests, only: [:new, :create]
+    #Added route to Wishlist
+    resources :wishlists, only: [:create]
+    #------
   end
   # resources :watches, only:[:index, :new, :create, :edit, :update, :delete]
   resources :requests, only: [:index, :edit, :update, :delete]

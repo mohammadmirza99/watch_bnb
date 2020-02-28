@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # @user = User.find(params[:id])
   @watches = Watch.all
   @requests = Request.all
+  @wishlists = Wishlist.all
  end
 
  def new
