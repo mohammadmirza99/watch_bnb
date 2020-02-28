@@ -1,10 +1,10 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: #800020;
-  border-bottom: 3px solid black;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  background: rgb(128, 0, 32);
+  // border-bottom: 3px solid black;
+  // border-bottom-right-radius: 5px;
+  // border-bottom-left-radius: 5px;
   z-index:1;
   position: fixed;
   width: 100%;
@@ -23,17 +23,18 @@
 .nav-link {
   text-decoration: none !important;
   color: #E4E5E8 !important;
+  transition: 0.3s;
 
   &:hover {
     color: white !important;
   background-color: #232425;
-  border-bottom: 2px solid #E4E5E8;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-topright: 10px;
-  -moz-border-radius-bottomright: 0px;
-  -moz-border-radius-bottomleft: 0px;
-  -webkit-border-radius: 10px 10px 0px 0px;
-  border-radius: 10px 10px 0px 0px;
+  // border-bottom: 2px solid #E4E5E8;
+  // -moz-border-radius-topleft: 10px;
+  // -moz-border-radius-topright: 10px;
+  // -moz-border-radius-bottomright: 0px;
+  // -moz-border-radius-bottomleft: 0px;
+  // -webkit-border-radius: 10px 10px 0px 0px;
+  // border-radius: 10px 10px 0px 0px;
 
   }
 }

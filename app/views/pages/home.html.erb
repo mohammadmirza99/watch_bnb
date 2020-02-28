@@ -34,19 +34,21 @@
           <div>
             <h6><%= watch.brand %> <br> <%= watch.model %></h6>
           </div>
-
           <div>
-            <p> <%= watch.price %> $</p>
+            <p> $<%= watch.price %></p>
           </div>
         </div>
 
         <div class="row2">
-
           <%#  <div> <h6> Material :</h6> <p><%= watch.material  </p> </div> %>
-
+          <div>
+            <%# Modal was added and customized to each card on homepage %>
+             <button class="button-user" onclick='window.modalClick("<%= watch.brand %> <%= watch.model %> " , "<%= watch.description %>", `<%= cl_image_path watch.image_url.key, crop: :fill, height: 350, width: 270 %>`)'>Info</button>
+            <%#= link_to "Book", new_watch_request_path(watch.id), class:"button-user" %>
+          </div>
 
           <div>
-            <%= link_to "Book", new_watch_request_path(watch.id), class:"button-user" %>
+            <%= button_to "Reserve", new_watch_request_path(watch), class:"button-user", method: :get %>
           </div>
 
         </div>
@@ -61,9 +63,14 @@
   </main>
 
 </div>
+<%= link_to "test", watches_path, method: :post  %>
+<a rel="no follow" data-method ="post" href="/watches/create"><i class="far fa-heart"></i></a>
+
 <%# Testing button to see if modal works %>
 
 <%# <button id="modal-btn" onclick="window.modalClick('test1', 'test2', 'https://images.rolex.com/2019/catalogue/images/upright-bba-with-shadow/m116613lb-0005.png?imwidth=1024')">Reserve</button> %>
+<%# <button id="modal-btn" onclick="window.modalClick('test1', 'test2', 'https://images.rolex.com/2019/catalogue/images/upright-bba-with-shadow/m116613lb-0005.png?imwidth=1024')">Reserve</button>  %>
+
 <%# -------------  %>
 
 <!-- <button onclick="modalClick('test1', 'test2', 'https://images.rolex.com/2019/catalogue/images/upright-bba-with-shadow/m116613lb-0005.png?imwidth=1024')">Reserve</button>

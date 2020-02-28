@@ -75,7 +75,6 @@ watch3 = Watch.new(
     }
   )
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672395/zpfp2smfjipdh83phw2p.jpg")
-
 watch3.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch3.save
 
