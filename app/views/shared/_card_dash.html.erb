@@ -1,3 +1,7 @@
+
+<!-- guys j'ai ajouté les photos de la montre pour chaque request, i change some
+style like the height, width, button, text-place -->
+
 <% @requests.each do |request| %>
   <div class="card-dash">
     <div class="column1">
@@ -28,9 +32,7 @@
 
       </div>
 
-      <div class="button">
-        <%= link_to "Change", requests_path %>
-      </div>
+        <%= link_to "Change", requests_path(request.id), class: "button" %>
 
     </div>
   </div>
