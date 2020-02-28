@@ -1,9 +1,26 @@
-<%= simple_form_for [@watch, @request] do |f| %>
 
-<%# Added a date picker %>
-  <%= f.input :date_start, as: :date, order: [:day, :month, :year] %>
-  <%= f.input :date_end, as: :date, order: [:day, :month, :year] %>
 
-  <%= f.submit "Book", class: "btn btn-primary" %>
-<% end  %>
 
+<div class="wrapper">
+  <div class="edit-form">
+    <div class="input-field">
+      <%= simple_form_for [@watch, @request] do |f| %>
+
+      <div class="input-field">
+        <i class="fas fa-table"></i>
+        <%= f.input :date_start, as: :date, order: [:day, :month, :year] %>
+      </div>
+
+      <div class="input-field">
+        <i class="fas fa-table"></i>
+        <%= f.input :date_end, as: :date, order: [:day, :month, :year] %>
+      </div>
+
+      <div>
+        <%= f.submit "Book !", class: 'button' %>
+      </div>
+
+      <%end%>
+    </div>
+  </div>
+</div>
