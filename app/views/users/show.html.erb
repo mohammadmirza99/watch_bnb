@@ -5,17 +5,13 @@
     </div>
   <div>
     <div class="dashboard-main">
-
-
       <div>
         <h3>Your requests</h3>
         <%# Added code to render a button a certain way depending on status  %>
         <% @requests.each do |request| %>
-
-          <% if request.watch.user == current_user%>
-            <div class="card-dash card-dash-border-orange">
+          <div class="card-dash">
             <div class="column1">
-              <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80" alt="watch", style="width: 200px">
+              <%= cl_image_tag request.watch.image_url.key, crop: :fill %>
             </div>
             <div class="content">
               <div class="title border-bottom">
@@ -34,73 +30,11 @@
                   <p><%= request.date_end[4] + request.date_end[5] + "/" + request.date_end[8] + "/" + request.date_end[17] + request.date_end[18] + request.date_end[19] + request.date_end[20]%></p>
                 </div>
               </div>
-              <div>
-                <%= request.status.capitalize %>
-                <%= link_to "Accept", request_path(request), method: :patch %>
-              </div>
+                <%= request.status  %>
             </div>
           </div>
-          <% end %>
-
-          <% if request.status == "approved" && request.watch.user != current_user %>
-          <div class="card-dash card-dash-border-green">
-            <div class="column1">
-              <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80" alt="watch", style="width: 200px">
-            </div>
-            <div class="content">
-              <div class="title border-bottom">
-                <h3><%= request.watch.brand %></h3>
-              </div>
-              <div class="info-request">
-                <h5><%= request.watch.model %></h5>
-              </div>
-              <div class="column2">
-                <div>
-                  <h5>Start</h5>
-                  <p><%= request.date_start[4] + request.date_start[5] + "/" + request.date_start[8] + "/" + request.date_start[17] + request.date_start[18] + request.date_start[19] + request.date_start[20]%></p>
-                </div>
-                <div class="text">
-                  <h5>End</h5>
-                  <p><%= request.date_end[4] + request.date_end[5] + "/" + request.date_end[8] + "/" + request.date_end[17] + request.date_end[18] + request.date_end[19] + request.date_end[20]%></p>
-                </div>
-              </div>
-              <div>
-                <%= request.status.capitalize %>
-              </div>
-            </div>
-          </div>
-
-          <% elsif request.watch.user != current_user %>
-            <div class="card-dash card-dash-border-orange">
-            <div class="column1">
-              <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80" alt="watch", style="width: 200px">
-            </div>
-            <div class="content">
-              <div class="title border-bottom">
-                <h3><%= request.watch.brand %></h3>
-              </div>
-              <div class="info-request">
-                <h5><%= request.watch.model %></h5>
-              </div>
-              <div class="column2">
-                <div>
-                  <h5>Start</h5>
-                  <p><%= request.date_start[4] + request.date_start[5] + "/" + request.date_start[8] + "/" + request.date_start[17] + request.date_start[18] + request.date_start[19] + request.date_start[20]%></p>
-                </div>
-                <div class="text">
-                  <h5>End</h5>
-                  <p><%= request.date_end[4] + request.date_end[5] + "/" + request.date_end[8] + "/" + request.date_end[17] + request.date_end[18] + request.date_end[19] + request.date_end[20]%></p>
-                </div>
-              </div>
-              <div>
-                <%= request.status.capitalize %>
-              </div>
-            </div>
-          </div>
-          <% end %>
         <% end %>
         <%# --------------------------------------------------------------------  %>
-
       </div>
       <div>
 
