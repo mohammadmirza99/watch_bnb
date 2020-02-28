@@ -49,16 +49,12 @@
         </div>
 
         <div class="row2">
-          <%#  <div> <h6> Material :</h6> <p><%= watch.material  </p> </div> %>
-          <div>
-            <%# Modal was added and customized to each card on homepage %>
-             <button class="button-user" onclick='window.modalClick("<%= watch.brand %> <%= watch.model %> " , "<%= watch.description %>", `<%= cl_image_path watch.image_url.key, crop: :fill, height: 350, width: 270 %>`)'>Info</button>
-            <%#= link_to "Book", new_watch_request_path(watch.id), class:"button-user" %>
-          </div>
+          <!-- button should be able to work with the good path -->
+          <button class="card-button" onclick='window.modalClick("<%= watch.brand %> <%= watch.model %> " , "<%= watch.description %>", `<%= cl_image_path watch.image_url.key, crop: :fill, height: 350, width: 270 %>`)'>
+            Info
+          </button>
 
-          <div>
-            <%= button_to "Reserve", new_watch_request_path(watch), class:"button-user", method: :get %>
-          </div>
+          <%#= button_to "Reserve", new_watch_request_path(watch), class:"card-button", method: :get %>
 
         </div>
 
