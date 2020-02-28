@@ -3,6 +3,7 @@ class UsersController < ApplicationController
  def show
   # @user = User.find(params[:id])
   @watches = Watch.all
+  @requests = Request.all
  end
 
  def new
