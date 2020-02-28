@@ -12,7 +12,7 @@ export const modalClick = (titleProp, textProp, iconProp) => {
   })
   .then(action => {
     if (action) {
-      window.location = "/watches"
+      window.location = "/watches/request"
     }
   })
 }
