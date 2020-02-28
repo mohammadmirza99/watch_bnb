@@ -3,22 +3,16 @@
   <main role="main">
     <div class="jumbotron">
     <div class="homestyle">
-
+      <h1 class="display-4">Welcome to PrimeWatch</h1>
+      <p class="lead"><span class="underline--magical">Find the perfect watch for the occasion</span></p>
     </div>
-    <h1 class="display-4">Welcome to PrimeWatch</h1>
-    <p class="lead"><span class="underline--magical">Find the perfect watch for the occasion</span></p>
     <div class="container h-100">
-          <div class="d-flex justify-content-center h-100">
-            <div class="searchbar">
-              <input class="search_input" type="text" name="" placeholder="Search...">
-              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-            </div>
-          </div>
+
     </div>
   </div>
     <div class="album py-5 bg-light">
       <div class="container">
-        <h1>Trending</h1>
+        <h1 >Trending</h1>
         <div class="row">
 
     <% @watches.each do |watch| %>
@@ -73,8 +67,7 @@
 </div>
 
 <%# Testing buttons  %>
-<%= link_to "test", watches_path, method: :post  %>
-<a rel="no follow" data-method ="post" href="/watches/create"><i class="far fa-heart"></i></a>
+
 
 <%# Testing button to see if modal works %>
 
