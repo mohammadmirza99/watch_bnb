@@ -1,11 +1,14 @@
 import swal from 'sweetalert';
 
 export const modalClick = (titleProp, textProp, iconProp) => {
+  console.log(iconProp);
+  console.log(textProp);
   swal({
-    title: "Good job!",
-    text: "You clicked the button!",
+    title: titleProp,
+    text: textProp,
     icon: iconProp,
-    button: "Reserve Watch!",
+    button: "Reserve Watch!"
+
   })
   .then(action => {
     if (action) {

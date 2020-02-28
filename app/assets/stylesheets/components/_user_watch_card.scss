@@ -73,16 +73,17 @@
 .button-user {
   background-color: #80001f;
   padding: 5px;
-  border-radius: 12px;
+  // border-radius: 12px;
   text-align: center;
   width: 67px;
   text-decoration: none;
   color: white;
   padding: 8px;
-    a:hover {
-      background-color: white;
-      color: black;
+  transition: 0.3s;
+    &:hover {
+      background-color: #232425;
       text-decoration: none;
+
   }
 }
 

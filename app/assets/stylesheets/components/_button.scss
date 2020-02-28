@@ -6,10 +6,27 @@
   }
 }
 
-#modal-btn :onclick{
-  background: blue;
+
+.swal-button{
+
+  background: black;
 }
 
 .swal-button--confirm{
-  background:red;
+  background:#800020;
+}
+
+.swal-button:not([disabled]):hover{
+  background: #232425;
+}
+
+.swal-icon--custom{
+  margin: 0;
+  padding: 0;
+  height: 150px;
+}
+
+.swal-footer{
+  display: flex;
+  justify-content: center;
 }
