@@ -75,7 +75,8 @@ watch3 = Watch.new(
     }
   )
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672395/zpfp2smfjipdh83phw2p.jpg")
-watch2.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+watch3.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch3.save
 
 watch4 = Watch.new(
@@ -88,8 +89,9 @@ watch4 = Watch.new(
     }
   )
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582752278/71T7jk_2BG5-L._AC_UX342__gtuh4i.jpg")
-watch2.image_url.attach(io: file, filename: 'nes.png', content_type: "image/png")
+watch4.image_url.attach(io: file, filename: 'nes.png', content_type: "image/png")
 watch4.save
+
 watch5 = Watch.new(
     {
       brand: 'Tissot',
@@ -100,8 +102,9 @@ watch5 = Watch.new(
     }
   )
 file = URI.open('https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582752415/T127.410.11.041.00_1_zzw3f0.png')
-watch2.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch5.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch5.save
+
 watch6 = Watch.new(
     {
       brand: 'Garmin',
@@ -112,8 +115,9 @@ watch6 = Watch.new(
     }
   )
 file = URI.open('https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582752553/5060908-RSW00_pio3bp.jpg')
-watch2.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch6.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch6.save
+
 watch7 = Watch.new(
     {
       brand: 'Diesel',
@@ -124,7 +128,7 @@ watch7 = Watch.new(
     }
   )
 file = URI.open('https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582753372/Montre-Homme-Diesel-DZ4282_fobq5m.jpg')
-watch2.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+watch7.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 watch7.save
 
 
