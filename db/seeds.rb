@@ -8,7 +8,7 @@
 require 'open-uri'
 
 puts "cleaning database..."
-Review.destroy_all
+Wishlist.destroy_all
 Request.destroy_all
 Watch.destroy_all
 User.destroy_all
@@ -154,7 +154,7 @@ watch7.save
 # puts "creating requests"
 # Request.create!(requests_attributes)
 
-# review_attributes =[{
+# wishlist_attributes =[{
 #         rating: 4,
 #         content: "The watch was amazing",
 #         user: user1,
@@ -176,7 +176,7 @@ watch7.save
 #     }
 # ]
 # puts "creating reviews"
-# Review.create!(review_attributes)
+# Wishlist.create!(wishlist_attributes)
 
 puts "finished"
 
