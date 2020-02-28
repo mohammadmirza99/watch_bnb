@@ -37,7 +37,7 @@ watch1 = Watch.new({
     model: "Model",
     description: "diamond",
     price: 50,
-    user: user1
+    user: user2
   })
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582922259/Complete-Rolex-Buying-Guide-gear-patrol-Perpetual_hs6ysq.jpg")
 watch1.image_url.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -100,7 +100,7 @@ watch6 = Watch.new(
       model: "Fenix 5",
       description: "Plastic",
       price: 30,
-      user: user1
+      user: user3
     }
   )
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582752278/71T7jk_2BG5-L._AC_UX342__gtuh4i.jpg")
