@@ -1,6 +1,6 @@
 <div class="sidenav">
-<div> <%= link_to "Your Watches", watches_path %> </div>
-<div><%= link_to "Requests", requests_path %> </div>
+<div> <%= link_to "Your Watches", user_path(current_user) %> </div>
+<div><%= link_to "Requests", user_path(current_user) %> </div>
 <div><%= link_to "Add watch", new_watch_path %></div>
 </div>
 
