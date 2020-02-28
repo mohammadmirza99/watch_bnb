@@ -47,11 +47,9 @@
 
         <div class="row2">
           <!-- button should be able to work with the good path -->
-          <button class="card-button" onclick='window.modalClick("<%= watch.brand %> <%= watch.model %> " , "<%= watch.description %>", `<%= cl_image_path watch.image_url.key, crop: :fill, height: 350, width: 270 %>`)'>
-            Info
-          </button>
 
-          <%= button_to "Reserve", new_watch_request_path(watch), class:"card-button", method: :get %>
+
+          <%= button_to "Book", new_watch_request_path(watch), class:"card-button", method: :get %>
 
         </div>
 

@@ -46,7 +46,7 @@ watch1 = Watch.new({
     model: "model ",
     description: "diamond",
     price: 40,
-    user: user1
+    user: user2
   })
 file = URI.open("https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582672411/d5vieik9zapgbi7tq1om.jpg")
 watch1.image_url.attach(io: file, filename: 'nes.png', content_type: 'image/png')
