@@ -6,118 +6,164 @@
   <div>
     <div class="dashboard-main">
 
+
       <div>
         <h3>Your requests</h3>
-
+        <%# Added code to render a button a certain way depending on status  %>
         <% @requests.each do |request| %>
-  <div class="card-dash">
-    <div class="column1">
-      <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80" alt="watch", style="width: 200px">
-    </div>
 
-    <div class="content">
+          <% if request.watch.user == current_user%>
+            <div class="card-dash card-dash-border-orange">
+            <div class="column1">
+              <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80" alt="watch", style="width: 200px">
+            </div>
+            <div class="content">
+              <div class="title border-bottom">
+                <h3><%= request.watch.brand %></h3>
+              </div>
+              <div class="info-request">
+                <h5><%= request.watch.model %></h5>
+              </div>
+              <div class="column2">
+                <div>
+                  <h5>Start</h5>
+                  <p><%= request.date_start[4] + request.date_start[5] + "/" + request.date_start[8] + "/" + request.date_start[17] + request.date_start[18] + request.date_start[19] + request.date_start[20]%></p>
+                </div>
+                <div class="text">
+                  <h5>End</h5>
+                  <p><%= request.date_end[4] + request.date_end[5] + "/" + request.date_end[8] + "/" + request.date_end[17] + request.date_end[18] + request.date_end[19] + request.date_end[20]%></p>
+                </div>
+              </div>
+              <div>
+                <%= request.status.capitalize %>
+                <%= link_to "Accept", request_path(request), method: :patch %>
+              </div>
+            </div>
+          </div>
+          <% end %>
 
-      <div class="title border-bottom">
-        <h3><%= request.watch.brand %></h3>
-      </div>
+          <% if request.status == "approved" && request.watch.user != current_user %>
+          <div class="card-dash card-dash-border-green">
+            <div class="column1">
+              <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80" alt="watch", style="width: 200px">
+            </div>
+            <div class="content">
+              <div class="title border-bottom">
+                <h3><%= request.watch.brand %></h3>
+              </div>
+              <div class="info-request">
+                <h5><%= request.watch.model %></h5>
+              </div>
+              <div class="column2">
+                <div>
+                  <h5>Start</h5>
+                  <p><%= request.date_start[4] + request.date_start[5] + "/" + request.date_start[8] + "/" + request.date_start[17] + request.date_start[18] + request.date_start[19] + request.date_start[20]%></p>
+                </div>
+                <div class="text">
+                  <h5>End</h5>
+                  <p><%= request.date_end[4] + request.date_end[5] + "/" + request.date_end[8] + "/" + request.date_end[17] + request.date_end[18] + request.date_end[19] + request.date_end[20]%></p>
+                </div>
+              </div>
+              <div>
+                <%= request.status.capitalize %>
+              </div>
+            </div>
+          </div>
 
-      <div class="info-request">
-        <h5><%= request.watch.model %></h5>
-      </div>
-
-      <div class="column2">
-        <div>
-          <h5>Start</h5>
-          <p><%= request.date_start[4] + request.date_start[5] + "/" + request.date_start[8] + "/" + request.date_start[17] + request.date_start[18] + request.date_start[19] + request.date_start[20]%></p>
-        </div>
-
-        <div class="text">
-          <h5>End</h5>
-          <p><%= request.date_end[4] + request.date_end[5] + "/" + request.date_end[8] + "/" + request.date_end[17] + request.date_end[18] + request.date_end[19] + request.date_end[20]%></p>
-        </div>
-
-      </div>
-
-      <div class="button">
-        <%= link_to "Change", requests_path %>
-      </div>
-
-    </div>
-  </div>
-
-<% end %>
+          <% elsif request.watch.user != current_user %>
+            <div class="card-dash card-dash-border-orange">
+            <div class="column1">
+              <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80" alt="watch", style="width: 200px">
+            </div>
+            <div class="content">
+              <div class="title border-bottom">
+                <h3><%= request.watch.brand %></h3>
+              </div>
+              <div class="info-request">
+                <h5><%= request.watch.model %></h5>
+              </div>
+              <div class="column2">
+                <div>
+                  <h5>Start</h5>
+                  <p><%= request.date_start[4] + request.date_start[5] + "/" + request.date_start[8] + "/" + request.date_start[17] + request.date_start[18] + request.date_start[19] + request.date_start[20]%></p>
+                </div>
+                <div class="text">
+                  <h5>End</h5>
+                  <p><%= request.date_end[4] + request.date_end[5] + "/" + request.date_end[8] + "/" + request.date_end[17] + request.date_end[18] + request.date_end[19] + request.date_end[20]%></p>
+                </div>
+              </div>
+              <div>
+                <%= request.status.capitalize %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+        <%# --------------------------------------------------------------------  %>
 
       </div>
       <div>
+
       <h3>Your Watches</h3>
       <% @watches.each do |watch| %>
-    <% if watch.user == current_user %>
-    <div class="card-user">
-      <div class="card-image">
-        <% if watch.image_url.attached? %>
-          <%= cl_image_tag watch.image_url.key, crop: :fill, height: 350, width: 270 %>
-        <% else %>
-          <img src="https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582817022/GHxz53Rryvj58zTtGx7o9q3t.jpg" alt="">
+          <% if watch.user == current_user %>
+          <div class="card-user">
+            <div class="card-image">
+              <% if watch.image_url.attached? %>
+                <%= cl_image_tag watch.image_url.key, crop: :fill, height: 350, width: 270 %>
+              <% else %>
+                <img src="https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582817022/GHxz53Rryvj58zTtGx7o9q3t.jpg" alt="">
+              <% end %>
+            </div>
+            <div class="content-watch">
+              <div class="row1">
+                <div>
+                  <h6><%= watch.brand %> <br> <%= watch.model %></h6>
+                </div>
+                <div>
+                  <p> $<%= watch.price %>/day</p>
+                </div>
+              </div>
+              <div class="row2">
+                <div>
+                  <%= link_to "Edit", new_watch_request_path(watch.id), class:"button-user" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
         <% end %>
       </div>
-      <div class="content-watch">
-        <div class="row1">
-          <div>
-            <h6><%= watch.brand %> <br> <%= watch.model %></h6>
-          </div>
-          <div>
-            <p> $<%= watch.price %>/day</p>
-          </div>
-        </div>
-        <div class="row2">
-          <div>
-            <%= link_to "Edit", new_watch_request_path(watch.id), class:"button-user" %>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  <% end %>
-
-
-      <h3>Your Wislist</h3>
-
-      <% @wishlists.each do |wishlist| %>
-        <div class="card-dash">
-          <div class="column1">
-            <%#= cl_image_tag request.watch.image_url.key, crop: :fill %>
-          </div>
-
-          <div class="content">
-
-
-            <div class="title border-bottom">
-              <h3><%= wishlist.watch.brand %></h3>
+      <div>
+        <h3>Your Wislist</h3>
+         <% @wishlists.each do |wishlist| %>
+            <div class="card-user">
+            <div class="card-image">
+              <% if wishlist.watch.image_url.attached? %>
+                <%= cl_image_tag wishlist.watch.image_url.key, crop: :fill, height: 350, width: 270 %>
+              <% else %>
+                <img src="https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582817022/GHxz53Rryvj58zTtGx7o9q3t.jpg" alt="">
+              <% end %>
             </div>
-
-            <div class="info-request">
-              <h5><%= wishlist.watch.model %></h5>
-            </div>
-
-            <div class="column2">
-              <div>
-                <h5>Start</h5>
-                <p><%#= request.date_start[4] + request.date_start[5] + "/" + request.date_start[8] + "/" + request.date_start[17] + request.date_start[18] + request.date_start[19] + request.date_start[20]%></p>
+            <div class="content-watch">
+              <div class="row1">
+                <div>
+                  <h6><%= wishlist.watch.brand %> <br> <%= wishlist.watch.model %></h6>
+                </div>
+                <div>
+                  <p> $<%= wishlist.watch.price %>/day</p>
+                </div>
               </div>
-
-              <div class="text">
-                <h5>End</h5>
-                <p><%#= request.date_end[4] + request.date_end[5] + "/" + request.date_end[8] + "/" + request.date_end[17] + request.date_end[18] + request.date_end[19] + request.date_end[20]%></p>
+              <div class="row2">
+                <div>
+                  <%#= link_to "Edit", new_watch_request_path(watch.id), class:"button-user" %>
+                </div>
               </div>
-
             </div>
-
-              <%#= link_to "Change", requests_path(request.id), class: "button" %>
-
           </div>
-        </div>
+<%# test -----------------  %>
 
-      <% end %>
+        <% end %>
 
       </div>
     </div>

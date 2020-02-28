@@ -11,6 +11,7 @@ class RequestsController < ApplicationController
   def create
     @watch = Watch.find(params[:watch_id])
     @request = Request.new(safe_params)
+    @request.status = "pending"
     @request.watch = @watch
     @request.user = current_user
 
@@ -19,6 +20,13 @@ class RequestsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def update
+    @request = Request.find(params[:id])
+    @request.update({status: "accepted"})
+
+    redirect_to user_path(current_user)
 
   end
 
