@@ -63,27 +63,23 @@
 }
 
 .row2 {
+
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  margin-left: 10px;
-  align-items: flex-end;
+  padding: 10px 99px;
 }
 
-.button-user {
-  background-color: #80001f;
+.card-button {
+  background-color: #BB324F;
   padding: 5px;
-  // border-radius: 12px;
+  border-radius: 3px;
   text-align: center;
-  width: 67px;
-  text-decoration: none;
+  width: 100px;
   color: white;
-  padding: 8px;
-  transition: 0.3s;
+  text-decoration: none;
     &:hover {
-      background-color: #232425;
+      color: white;
       text-decoration: none;
-
-  }
+      background-color: black;
+    }
 }
-

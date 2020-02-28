@@ -106,34 +106,35 @@
 
       <h3>Your Watches</h3>
       <% @watches.each do |watch| %>
-          <% if watch.user == current_user %>
-          <div class="card-user">
-            <div class="card-image">
-              <% if watch.image_url.attached? %>
-                <%= cl_image_tag watch.image_url.key, crop: :fill, height: 350, width: 270 %>
-              <% else %>
-                <img src="https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582817022/GHxz53Rryvj58zTtGx7o9q3t.jpg" alt="">
-              <% end %>
-            </div>
-            <div class="content-watch">
-              <div class="row1">
-                <div>
-                  <h6><%= watch.brand %> <br> <%= watch.model %></h6>
-                </div>
-                <div>
-                  <p> $<%= watch.price %>/day</p>
-                </div>
-              </div>
-              <div class="row2">
-                <div>
-                  <%= link_to "Edit", new_watch_request_path(watch.id), class:"button-user" %>
-                </div>
-              </div>
-            </div>
+    <% if watch.user == current_user %>
+    <div class="card-user">
+      <div class="card-image">
+        <% if watch.image_url.attached? %>
+          <%= cl_image_tag watch.image_url.key, crop: :fill, height: 350, width: 270 %>
+        <% else %>
+          <img src="https://res.cloudinary.com/dkpy2yoeq/image/upload/v1582817022/GHxz53Rryvj58zTtGx7o9q3t.jpg" alt="">
+        <% end %>
+      </div>
+      <div class="content-watch">
+        <div class="row1">
+          <div>
+            <h6><%= watch.brand %> <br> <%= watch.model %></h6>
+          </div>
+          <div>
+            <p> $<%= watch.price %>/day</p>
+          </div>
+        </div>
+        <div class="row2">
+          <div>
+            <%= link_to "Edit", new_watch_request_path(watch.id), class:"card-button" %>
           </div>
           <% end %>
         <% end %>
+
       </div>
+    </div>
+  </div>
+
       <div>
         <h3>Your Wislist</h3>
          <% @wishlists.each do |wishlist| %>
@@ -162,13 +163,10 @@
             </div>
           </div>
 <%# test -----------------  %>
-
         <% end %>
-
       </div>
-    </div>
-  </div>
   <div class="push"></div>
+
 </div>
 </div>
 

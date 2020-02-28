@@ -5,6 +5,10 @@
   <div class="edit-form">
     <div class="input-field">
       <%= simple_form_for [@watch, @request] do |f| %>
+      <div class="input-field text-center">
+        <h2><%= @watch.brand %></h2>
+        <h5><%= @watch.model %></h5>
+      </div>
 
       <div class="input-field">
         <i class="fas fa-table"></i>
@@ -14,6 +18,11 @@
       <div class="input-field">
         <i class="fas fa-table"></i>
         <%= f.input :date_end, as: :date, order: [:day, :month, :year] %>
+      </div>
+
+      <div class="input-field">
+        <p>Price :</p>
+        <p><%= @watch.price %> $/day</p>
       </div>
 
       <div>
