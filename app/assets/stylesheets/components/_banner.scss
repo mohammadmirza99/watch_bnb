@@ -5,4 +5,27 @@
   margin-bottom: 0;
   height: 500px;
   background-position: center;
+  h1{
+    font-weight: bold;
+    color:white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  p{
+    font-weight: bold;
+    margin-left: 50px;
+    color: #F8ECEF;
+    font-size: 20px;
+     text-shadow: 2px 2px 4px #000000;
+  }
+}
+.underline--magical {
+  background-image: linear-gradient(to right top, #ba324f, #ce6578, #df93a1, #edbfc9, #f8ecef);
+  background-repeat: no-repeat;
+  background-size: 100% 0.8em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
 }
