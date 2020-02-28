@@ -2,17 +2,50 @@
 <div class="container-body">
 
   <div class="dashboard-container">
-      <div class="dashboard-sidebar">
-        <%= render 'shared/sidebar' %>
-      </div>
-    <div>
       <div class="dashboard-main">
-        <h3>Add a watch</h3>
-        <% #if policy(Watch).new? %>
-        <%= render 'form' %>
-        <% #end %>
       </div>
     </div>
   </div>
 </div>
 
+<div class="wrapper">
+  <div class="edit-form">
+    <div class="input-field">
+      <%= simple_form_for(@watch) do |f| %>
+
+      <div class="input-field">
+        <i class="fas fa-copyright"></i>
+        <%= f.label :brand %>
+        <%= f.text_field :brand, class: 'form-control' %>
+      </div>
+      <div class="input-field">
+        <i class="fas fa-clock"></i>
+        <%= f.text_field :model, class: 'form-control' %>
+      </div>
+
+      <div class="input-field">
+        <i class="fas fa-dollar-sign"></i>
+        <%= f.label :price %>
+        <%= f.text_field :price, class: 'form-control' %>
+
+      </div>
+
+      <div class="input-field">
+        <i class="fas fa-align-justify"></i>
+        <%= f.label :description %>
+        <%= f.text_field :description, class: 'form-control' %>
+
+      </div>
+
+      <div class="input-field-image">
+        <%= f.input :image_url, as: :file %>
+      </div>
+
+      <div>
+        <%= f.submit "Create", class: 'button' %>
+
+      </div>
+      <%end%>
+    </div>
+  </div>
+</div>
